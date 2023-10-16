@@ -6,10 +6,10 @@ log-level: info
 external-controller: :9090
 proxies:
   - name: 美国107
-    server: www.diaoqw.top
+    server: www.domain.com
     port: 443
     type: trojan
-    password: test001
+    password: 123456
 proxy-groups:
   - name: 外网
     type: select
