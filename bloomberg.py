@@ -11,7 +11,7 @@ import time
 def send_wx(trans, text, href):
     time.sleep(1)  # 习惯性延迟
     res = requests.post('https://wxpusher.zjiecode.com/api/send/message', json={
-        'appToken': 'AT_25MuTSIpMdyOoO88l4RVn7jpsu3GwxU9',
+        'appToken': 'diaoqiAT_25MuTSIpMdyOoO88l4RVn7jpsu3GwxU9',
         'content': f'<h1>{trans}</h1><p>{text}</p><p>原文链接：{href}</p>',
         'contentType': 2,
         'topicIds': [32804],
@@ -28,7 +28,7 @@ def send_wx(trans, text, href):
 def fanyi(text):  # 百度翻译API
     time.sleep(1)  # 每秒最多调用一次
     appid = '20240821002129160'
-    secret = 'E93NoddGQ1zG4WX4zhki'
+    secret = 'diaoqiE93NoddGQ1zG4WX4zhki'
     salt = '123'
     str = f'{appid}{text}{salt}{secret}'
     md5_hash = hashlib.md5()
@@ -58,7 +58,7 @@ def insert_one(text, href):  # 插入一条数据到数据库
 config = {
     'host': '172.245.156.24',
     'user': 'diaoqi',
-    'password': 'ddqq19956-',
+    'password': 'd6-',
     'database': 'bloomberg',
     'charset': 'utf8mb4',
     'cursorclass': pymysql.cursors.DictCursor  # 使用字典格式的游标
