@@ -12,7 +12,7 @@ def send_wx(trans, text, href):
     time.sleep(1)  # 习惯性延迟
     res = requests.post('https://wxpusher.zjiecode.com/api/send/message', json={
         'appToken': 'diaoqiAT_25MuTSIpMdyOoO88l4RVn7jpsu3GwxU9',
-        'content': f'<h1>{trans}</h1><p>{text}</p><p>原文链接(国外)：<br/>{href}</p>',
+        'content': f'<h2>{trans}</h2><p>{text}</p><p>原文链接(国外)：<br/><a href="{href}">{href}</a></p>',
         'summary': trans,
         'contentType': 2,
         'topicIds': [32804],
