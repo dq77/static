@@ -5,3 +5,5 @@
 使用示例：
 
 > https://github.com/dq77/static/releases/download/1.0/tg.yaml
+
+另外，别问我什么是国内不让放的数据......
