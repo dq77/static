@@ -21,7 +21,7 @@ def send_wx(trans, text, href):
     })
     json = res.json()
     try:
-        print('微信发送', json['msg'])
+        print(f'微信发送{trans}: ', json['msg'])
     except KeyError:
         print('发送微信失败：', KeyError)
 
@@ -84,7 +84,7 @@ for a in a_elements:
     # 有些a标签里面的标题不是重要标题，强行获取导致报错则continue进入下一次循环
     try:
         div = a.find_element(By.XPATH,
-                             ".//div[contains(@class, 'Headline_large__3__hG') and (contains(@class, 'storyBlockHeadline'))]")
+                             ".//div[contains(@class, 'Headline_large__') and (contains(@class, 'storyBlockHeadline'))]")
         span = div.find_element(By.TAG_NAME, 'span')
         href = a.get_attribute('href')
         text = span.text
